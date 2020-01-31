@@ -45,4 +45,4 @@ Under the hood this is just a really dumb script that cuts out the first 7 lines
 Use `lint.sh all` to lint all files, `lint.sh $MODULE` to lint just one mod.
 
 ## Other notes
-You probably want to add `obj_dir/` to .gitignore if you're using git for version control since the compiled Verilator output gets pretty huge.
+You probably want to add `obj_dir/` to `.gitignore` if you're using git for version control since the compiled Verilator output gets pretty huge.
