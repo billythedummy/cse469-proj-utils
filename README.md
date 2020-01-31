@@ -37,7 +37,8 @@ Note: assumes you're using the `arm-linux-gnueabihf` toolchain. Change it to `ar
 1. `cd testcode/asm_tests`
 2. Write your asm file
 3. `./dump.sh $ASM_FILE`
-4. This will make a new file `$ASM_FILE.dump` that contains just the code section of the asm file
+4. This will make a new file `$ASM_FILE.dump` that contains just the code section of the asm file.
+
 Under the hood this is just a really dumb script that cuts out the first 7 lines of the objdump output to make it easier to read. This number 7 might differ for each toolchain. I should probably do it by matching the '.start' or 00000000 token instead...
 
 ## Linting with Verilator
