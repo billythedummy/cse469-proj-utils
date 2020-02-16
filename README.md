@@ -32,6 +32,13 @@ Typically when I create a new model I just copy-paste the `Makefile` and `$OLDMO
 3. Makefile: might have to change `RTLSRC` if your verilog module is in another directory
 4. $NEWMODULE_test.cpp: find and replace all instances of `V$OLDMODULE` with `V$NEWMODULE` 
 
+## Generating hexcode files for $readmemh
+Use [testcode/hexcode_tests/tohex.py](testcode/hexcode_tests/tohex.py)
+
+View the python help message `./tohex.py -h` for more info.
+
+Requires python 3
+
 ## Generating custom ARM ASM
 Note: assumes you're using the `arm-linux-gnueabihf` toolchain. Change it to `arm-none-` or whatever you're using in `dump.sh` if you wanna change that.
 1. `cd testcode/asm_tests`
