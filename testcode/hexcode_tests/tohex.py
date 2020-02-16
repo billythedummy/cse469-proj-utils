@@ -57,7 +57,10 @@ with open(outfile, "w") as f:
             start_ind = line.find(prefix) + len(prefix)
             remove_pref = line[start_ind:]
             space_ind = remove_pref.find(" ")
-            f.write(remove_pref[:space_ind] + "\n")
+            instr = remove_pref[:space_ind]
+            for i in range(0, len(instr), 2):
+                f.write(f'{instr[i:i+2]} ')
+            f.write("\n")
             previous_addr = addr
 
 print("Hexfile written, cleaning up")
